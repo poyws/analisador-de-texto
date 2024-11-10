@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analisador de Texto Interativo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <textarea class="text-input" placeholder="Digite ou cole seu texto aqui..."></textarea>
+  
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-title">Caracteres (com espaços)</div>
+        <div class="stat-value" id="charCount">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Caracteres (sem espaços)</div>
+        <div class="stat-value" id="charNoSpaceCount">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Palavras</div>
+        <div class="stat-value" id="wordCount">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Parágrafos</div>
+        <div class="stat-value" id="paragraphCount">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Espaços em branco</div>
+        <div class="stat-value" id="whiteSpaceCount">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Pontuação</div>
+        <div class="stat-value" id="punctuationCount">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Tempo de leitura</div>
+        <div class="stat-value" id="readTime">0 min</div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-clear" id="clearBtn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M2 4H14M5 4V2H11V4M6 6V12M10 6V12M4 4L4.8 13.6C4.8 14.37 5.43 15 6.2 15H9.8C10.57 15 11.2 14.37 11.2 13.6L12 4" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        Limpar
+      </button>
+      <button class="btn btn-copy" id="copyBtn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M13 5H7C5.89543 5 5 5.89543 5 7V13C5 14.1046 5.89543 15 7 15H13C14.1046 15 15 14.1046 15 13V7C15 5.89543 14.1046 5 13 5Z" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M3 11H2C1.44772 11 1 10.5523 1 10V2C1 1.44772 1.44772 1 2 1H10C10.5523 1 11 1.44772 11 2V3" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        Copiar
+      </button>
+      <div class="switch-container">
+        <span>Incluir espaços</span>
+        <label class="switch">
+          <input type="checkbox" id="spaceToggle" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
